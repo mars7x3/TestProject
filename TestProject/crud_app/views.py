@@ -1,12 +1,9 @@
-from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework import viewsets, generics, status, mixins
-from rest_framework.viewsets import GenericViewSet
+from rest_framework import viewsets, generics, status
 
-from crud_app.models import Category, Color, Product, ProductData
-from crud_app.serializers import CategorySerializer, ColorSerializer, ProductDataSerializer, ProductListSerializer, \
-    ProductDetailSerializer
+from crud_app.models import Category, Color, Product
+from crud_app.serializers import CategorySerializer, ColorSerializer, ProductListSerializer, ProductDetailSerializer
 from crud_app.utils import create_product_images, delete_product_images
 
 

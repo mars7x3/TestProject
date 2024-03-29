@@ -1,9 +1,7 @@
-import os
-
 from asgiref.sync import async_to_sync
 from channels.layers import get_channel_layer
 
-from crud_app.models import ProductImage, Product
+from crud_app.models import ProductImage
 from django.conf import settings
 
 

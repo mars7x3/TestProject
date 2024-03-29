@@ -1,7 +1,6 @@
 from rest_framework import serializers
 
 from crud_app.models import *
-from crud_app.utils import send_general_notification
 
 
 class CategorySerializer(serializers.ModelSerializer):
