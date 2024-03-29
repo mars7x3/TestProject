@@ -14,3 +14,12 @@ from django.core.asgi import get_asgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'main.settings')
 
 application = get_asgi_application()
+
+from channels.routing import ProtocolTypeRouter, URLRouter
+
+from crud_app.routers import websocket_urlpatterns
+
+application = ProtocolTypeRouter({
+    'http': application,
+    "websocket": URLRouter(websocket_urlpatterns),
+})
